@@ -1,9 +1,13 @@
-sign x = if (x > 0) then 1 else if (x < 0) then -1 else 0
-deg = 2 ^ 3 ^ 2
-val = (*) 2 ((+) 1 4) ^ 2
+-- Function declaring
+sumSquares x y = x ^ 2 + y ^ 2
+lenVec3 x y z =  sqrt (x^2 + y^2 + z^2)
 
-infixl 6 *+*
-(*+*) a b = a ^ 2 + b ^ 2
-val2 = 1 + 3 *+* 2 * 2
+-- Partial applying
+fun = max 5 42
+funPartial = (max 5) 42
 
-partial = (`mod` 14) ((+ 5) 10)
+maxWithNum num = max num -- skipped 2'nd arg for max
+maxWith5 = maxWithNum 5
+
+-- Conditions
+withCondition x num = (if x > 0 then 1 else (-1)) + num
